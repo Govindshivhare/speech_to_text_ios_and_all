@@ -7,6 +7,7 @@ import { Inject } from '@angular/core';
 declare var SpeechRecognition: any;
 declare var webkitSpeechRecognition: any;
 declare var Artyom: any;
+declare const navigator: any;
 
 @Injectable({
   providedIn: 'root'

@@ -3,6 +3,7 @@
   <div class="controls">
     <button (click)="start()">Start</button>
     <button (click)="stop()">Stop</button>
+    <router-outlet></router-outlet>
   </div>
   <div *ngIf="error()">
     <p style="color: red;">Error: {{ error() }}</p>
