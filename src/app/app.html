@@ -1,0 +1,11 @@
+<div style="text-align: center; margin-top: 50px;">
+  <h1>{{ title() }}</h1>
+  <div class="controls">
+    <button (click)="start()">Start</button>
+    <button (click)="stop()">Stop</button>
+  </div>
+  <div *ngIf="error()">
+    <p style="color: red;">Error: {{ error() }}</p>
+  </div>
+  <p><strong>Transcript:</strong> {{ transcript() }}</p>
+</div>
