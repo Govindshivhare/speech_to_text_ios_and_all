@@ -17,6 +17,14 @@ export class AppComponent implements OnDestroy {
   error = signal('');
   private subscription: Subscription;
 
+ onclick(action: string) {
+  if (action === 'start') {
+    this.start();
+  } else if (action === 'stop') {
+    this.stop();
+  }
+}
+
   constructor(private speechService: SpeechRecognitionService) {
     this.subscription = this.speechService.transcript$.subscribe(text => {
       if (text.includes('error') || text.includes('denied') || text.includes('not supported') || text.includes('failed')) {

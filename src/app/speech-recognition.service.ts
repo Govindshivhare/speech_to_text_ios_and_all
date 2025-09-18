@@ -147,7 +147,6 @@ export class SpeechRecognitionService {
       }
     }
   }
-
   stop() {
     if (isPlatformBrowser(this.platformId) && this.isListening) {
       if (this.usingNative && this.recognition) {
